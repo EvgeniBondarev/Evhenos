@@ -4,8 +4,6 @@ from turtle import back
 
 global db, sql
 
-
-
 db = sqlite3.connect('server.db')#создание таблицы
 sql = db.cursor()
 
@@ -13,9 +11,7 @@ sql.execute("""CREATE TABLE IF NOT EXISTS users(
 	login TEXT,
 	password TEXT, 
 	cash BIGINT
-
-)""")#создание столбцов
-
+)""")
 db.commit()
 
 def reg():
