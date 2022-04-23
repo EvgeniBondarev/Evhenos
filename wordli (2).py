@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
-from turtle import st
-from termcolor import colored
+from time import sleep, time
 import random
 import sys
 import colorama
@@ -32,27 +31,28 @@ attempt = 0
 def game():
     global attempt
     print("Введите слово:")
-    while attempt < 6:
-        guess = input().upper()
-        if len(guess) == 5 and guess.isalpha() and match(guess) == True:
-            if arf(guess.lower()) == True:
+    while attempt < 7:
+        player_word = input().upper()
+        if len(player_word) == 5 and player_word.isalpha() == True and match(player_word) == True:
+            if arf(player_word.lower()) == True:
                 sys.stdout.write('\x1b[1A')
                 sys.stdout.write('\x1b[2K')
             
-                for i in range(min(len(guess), 5)):
-                    if guess[i] == word[i]:
-                        print((Fore.GREEN + guess[i]), end="")
-                    elif guess[i] in word:
-                        print((Fore.YELLOW + guess[i]), end="")
+                for i in range(min(len(player_word), 5)):
+                    if player_word[i] == word[i]:
+                        print((Fore.GREEN + player_word[i]), end="")
+                    elif player_word[i] in word:
+                        print((Fore.YELLOW + player_word[i]), end="")
                     else:
-                        print(guess[i], end="")
+                        print(player_word[i], end="")
+                    sleep(0.2)
                 print()
                 attempt += 1
                 
-                if guess == word:
-                    print('Поздравляем! Вы угадали слово за %i попытки.' %attempt)
+                if player_word == word:
+                    print(f'Поздравляем! Вы угадали слово за {attempt} попытки.')
                 elif attempt == 6:
-                    print('Вы не угадали слово с 6 попыток, это было %s' %word.upper())
+                    print(f'Вы не угадали слово с 5 попыток, это было {Fore.GREEN + word.upper()}.')
             else:
                 print('В словаре игры нет такого слова, попробуйте другое!')
                 game()
@@ -61,6 +61,4 @@ def game():
             print('слово должно состоять из пяти букв')
             game()
 game()
-
-
 
