@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="style.css"></link>
+</head>
+<body>
+
+<div id="modal" class="modal bounceIn">
+    <div class="modal_txt">
+      <div class="hist"></div>
+      <div class="results"></div>
+      <h4>Ваш ник</h4>
+      <input id="neme_player" type="text" maxlength="6" placeholder="максимум 6 символов" value="">
+      <h4>выберите сложность</h4>
+      <input class="lvl" value="😂" type="button" onclick="number_lvl(1)" style="cursor: pointer;">
+      <input class="lvl" value="😅" type="button" onclick="number_lvl(2)" style="cursor: pointer;">
+      <input class="lvl" value="😈" type="button" onclick="number_lvl(3)" style="cursor: pointer;"><br><br>
+    </div>
+</div>
+<div id="info">
+  <div id="time" ></div>
+  <div id="point" ></div>
+</div> 
+  <div class="grid"> 
+  
+  </div>
+  <script src="app.js" charset="utf-8"></script>
+</body>
+</html>

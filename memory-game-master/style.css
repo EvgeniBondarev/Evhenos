@@ -1,0 +1,142 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100&family=Rubik:ital,wght@0,300;1,300&display=swap');
+
+@import "nullstyle.scss";
+
+body{
+  font-family: 'Rubik', sans-serif; 
+  background-image: url('fon.png');
+  background-size: cover;
+}
+/*
+.grid {
+ 
+  width: 425px;
+  height: 325px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto; 
+}
+*/
+.grid_lvl1{
+  width: 350px;
+  height: 225px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid_lvl2{
+  width: 425px;
+  height: 325px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto; 
+  
+}
+
+.grid_lvl3{
+  width: 725px;
+  height: 425px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+
+
+
+.content{ 
+  border-radius: 4px;
+  margin: 3px;  
+  height: 100px;
+  width: 100px;
+  font-size: 40px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(240, 248, 255, 0.003);
+  backdrop-filter: blur(10px);
+
+
+}
+
+
+#neme_player{
+  text-align: center;
+}
+
+/* ********** */
+.modal {
+  backdrop-filter: blur(7px);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99999;
+}
+.modal_vis {
+  display: block;
+}
+.body_block {
+  overflow: hidden;
+  margin-right: 17px;
+}
+
+.modal_txt {
+  text-align: center;
+  padding: 30px;
+  margin: 10px auto;
+  height: 400px;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.lvl{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 40px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(10px);
+  font-size: 28px;
+  border: none;
+}
+.lvl:hover {background-color: rgba(141, 115, 29, 0.853)}
+
+.lvl:active {
+ 
+  box-shadow: 0 3px rgba(91, 74, 19, 0.853);
+  transform: translateY(4px);
+}
+
+#info{
+  font-size: 20px;
+  text-align: center;
+}
+
+.results{
+  word-spacing: 3em;
+}
+.hist{
+  word-spacing: 1.5em
+}
+
+#neme_player{
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0);
+  outline:none;
+  font-size: 16px;
+}
+
+#my_info{
+
+  text-align: center;
+}
