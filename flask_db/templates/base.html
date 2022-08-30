@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>это база</title>
+</head>
+<body>
+    <a href="/">Добавить запись</a>
+    <h3>{{records}}</h3><br>
+    {%if records|length >0%}
+    
+        {%for element in records%}
+            <div class="element">
+                <hr>
+                <h4>{{element[1]}}</h4>
+                <a href="/info/{{element[0]}}">Подробнее</a>
+            </div>
+        {%endfor%}
+    {%else%}
+        <h2>тут статьи</h2>
+    {%endif%}
+    <a href="http://127.0.0.1:5000/images/1.png/" download="zvuk">
+        <button>Скачать файл</button>
+    </a>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>это база</title>
+</head>
+<body>
+    <a href="/">Добавить запись</a>
+    <h3>{{records}}</h3><br>
+    {%if records|length >0%}
+    
+        {%for element in records%}
+            <div class="element">
+                <hr>
+                <h3>{{element[0]}}</h3>
+                <h4>{{element[1]}}</h4>
+                <h4>{{element[2]}}</h4>
+            </div>
+        {%endfor%}
+    {%else%}
+        <h2>Статья удалена</h2>
+    {%endif%}
+    <h2>Коментарии</h2>
+    <hr>
+        <pre>{{coments[0][0]}}</pre>
+    <form method="post">
+        <input type="text" name="coment" id="coment" placeholder="Коментировать"><br>
+        <input type="submit" value="ОТПРАВИТЬ">
+    </form>
+</body>
+</html>
